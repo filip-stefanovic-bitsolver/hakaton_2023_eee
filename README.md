@@ -22,6 +22,6 @@ Potrebno je kreirati direktorijum /hakaton i unutar njega upload-ovati sve fajlo
 
 Nakon svake izmene u dizajnu je neophodno zameniti accelerator.bit i accelerator.hwh fajlove, koje ste isprva upload-ovali u memoriju plocice. Tako ce poslednja verzija dizajna biti koriscena prilikom runovanja jupiter notebook-a. 
 
-Morate pokrenuti sintezu, zatim implementaciju i na kraju generisanje bitstream-a. Ekstenzija .bit oznacava bitstream fajl - on se automatski generise u hakaton_eee/runs/impl_1/accelerator_top.bit. Ekstenzija .hwh oznacava hardware handoff fajl i taj fajl se automatski generise u hakaton_eee/runs/gen/. 
+Morate pokrenuti sintezu, zatim implementaciju i na kraju generisanje bitstream-a. Ekstenzija .bit oznacava bitstream fajl - on se automatski generise u hakaton_eee\hakaton_eee.runs\impl_1/accelerator_top_wrapper.bit. Ekstenzija .hwh oznacava hardware handoff fajl i taj fajl se automatski generise u C:\Users\filip\Desktop\hakaton2\hakaton_eee\hakaton_eee.gen\sources_1\bd\accelerator_top\hw_handoff/accelerator_top.hwh. 
 
 Da bi ova dva fajla mogli zajedno da se koriste, neophodno je da imaju isto ime
