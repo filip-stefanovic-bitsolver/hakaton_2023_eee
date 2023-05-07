@@ -15,7 +15,7 @@ Vasu implementaciju zadatka treba da integrisete u ovaj projekat.
 
 ## Jupiter notebook setup
 
-Fajlovi za testiranje projekta se nalaze u direktorijumu jupiter_demo. Neophodno je pristupiti plocici na adresi 192.168.2.99, koristeci vas browser. Lozinka za pristup plocici je **xilinx**. Nakon toga cete videti ovakvu strukturu direktorijuma:
+Dizajn je moguce koristiti pomocu python interaktivne konzole - jupyter notebook-a. Nakon boot-ovanja OS-a ce jupyter notebook biti dostupan na IP adresi 192.168.2.99, kojoj treba pristupiti preko vaseg browsera. Fajlovi za testiranje projekta se nalaze u direktorijumu jupiter_demo. Lozinka za pristup plocici je **xilinx**. Nakon sto se ulogujete cete videti ovakvu strukturu direktorijuma:
 
 ![image](https://user-images.githubusercontent.com/99603657/236697221-3d9ed968-1206-4253-a797-4a7c12a1441e.png)
 
@@ -23,12 +23,25 @@ Potrebno je kreirati direktorijum /hakaton.
 
 ![image](https://user-images.githubusercontent.com/99603657/236697275-039e660e-f784-488f-abaf-5544995b0c95.png)
 
-Unutar njega upload-ovati sve fajlove iz jupiter_demo direktorijuma. Direktorijum hakaton treba da izgleda ovako:
+![image](https://user-images.githubusercontent.com/99603657/236701612-4abf47b1-5122-4ec4-afa5-b1f1ee8d1164.png)
+
+
+Unutar njega upload-ovati sve fajlove iz jupiter_demo direktorijuma. 
+
+![image](https://user-images.githubusercontent.com/99603657/236701658-9977c5a7-f3a3-4d18-9bf0-48437c0699f6.png)
+
+Direktorijum hakaton treba da izgleda ovako:
 
 ![image](https://user-images.githubusercontent.com/99603657/236697509-e0f00643-d01a-48ea-a90b-f67fedebdae0.png)
 
 Nakon toga otvorite *hakaton_demo.ipynb*, gde se nalazi primer *python* koda kojim se ucitava slika, salje koriscenjem DMA kontrolera (*dma0.sendchannel.transfer(input_buffer)*), i zatim se obradjena slika se prima koriscenjem 2 DMA kontrolera (*dma0.recvchannel.transfer(output_buffer1)
 dma1.recvchannel.transfer(output_buffer2)*). Takodje ima primere upisa u memorijski-mapirane registre, kao i koriscenje tajmera za merenje performansi.
+
+Mozete izvrsiti sve instrukcije pritiskom na *Cell*:
+
+![image](https://user-images.githubusercontent.com/99603657/236701736-84ed1af4-1890-4658-ad8a-aa07a521820d.png)
+
+Mozete menjati demo notebook po svojoj potrebi. U sledecem poglavlju je ukratko opisana HW-SW veza.
 
 ## Ucitavanje novog dizajna na plocicu
 
@@ -42,4 +55,4 @@ Ovi fajlovi se ucitavaju u prvom koraku *hakaton_demo.ipynb*. Neophodno je da im
 
 ol = Overlay("/home/xilinx/jupyter_notebooks/hakaton/**accelerator_top.bit**")
 
-, a na osnovu toga se ocekuje i **accelerator_top.hwh**.
+, a na osnovu toga se ocekuje i **accelerator_top.hwh**. Imena mogu biti proizvoljna.
