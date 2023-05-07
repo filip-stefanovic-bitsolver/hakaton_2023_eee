@@ -7,7 +7,7 @@ Fajlovi za ucitavanje projekta u Vivadu se nalaze u hakaton_vivado/ direktorijum
 1. Otvoriti Vivado 2021.1
 2. Ici na Tools>Run Tcl Script...
 3. Navigirati do hakaton_vivado direktorijuma
-4. Izabrati hakaton.tcl
+4. Izabrati *hakaton.tcl* i pokrenuti izvrsavanje
 
 Projekat ce biti kreiran unutar direktorijuma u kome se nalazi *hakaton.tcl* skripta. Projekat ce biti imenovan hakaton_eee i sadrzi 2 DMA kontrolera, *example_design* i 4 Logic Analyzer-a. Prvi DMA koristi 8bitnu AXI Stream magistralu za slanje slike ka dizajnu i prijem obradjene slike sa dizajna. Drugi DMA samo vrsi prijem obradjene slike, ali sa 16bitne AXI Stream magistrale. Modul example_design je primer dizajna koji prihvata piksele sa AXI Stream magistrale i zatim ih shift-uje nalevo ili nadesno. Takodje ima integrisan AXI-APB bridge kojim se moze pristupati memorijski-mapiranim registrima (ukoliko ima potrebe za time). Logic Analyzer-i se mogu koristiti za posmatranje AXI magistrala koje se koriste u komunikaciji sa dizajnom.  
 
