@@ -34,6 +34,8 @@ Nakon svake izmene u dizajnu je neophodno zameniti accelerator.bit i accelerator
 
 Potrebno je izvrsiti sintezu, implementaciju i na kraju ispis bitstream-a. Ekstenzija .bit oznacava bitstream fajl - on se automatski generise u hakaton_eee\hakaton_eee.runs\impl_1/accelerator_top_wrapper.bit. Ekstenzija .hwh oznacava hardware handoff fajl i taj fajl se automatski generise u hakaton_eee\hakaton_eee.gen\sources_1\bd\accelerator_top\hw_handoff/accelerator_top.hwh. 
 
-Ovi fajlovi se ucitavaju u prvom koraku hakaton_demo.ipynb. Neophodno je da imaju isto ime, tako da ih treba preimenovati pre pokretanja notebook-a. Ime koje notebook ocekuje je definisano ovom linijom:
+Ovi fajlovi se ucitavaju u prvom koraku hakaton_demo.ipynb. Neophodno je da imaju isto ime, tako da ih treba preimenovati pre pokretanja notebook-a. Ime koje notebook koristi  je definisano ovom linijom:
 
-ol = Overlay("/home/xilinx/jupyter_notebooks/hakaton/accelerator.bit")
+ol = Overlay("/home/xilinx/jupyter_notebooks/hakaton/**accelerator_top.bit**")
+
+, a na osnovu toga se ocekuje i **accelerator_top.hwh**.
