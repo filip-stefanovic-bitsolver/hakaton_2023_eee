@@ -36,8 +36,8 @@ proc checkRequiredFiles { origin_dir } {
   }
 
   set files [list \
- "[file normalize "$origin_dir/example_design.v"]"\
-  ]
+ "[file normalize "$origin_dir/example_design.vhd"]"\
+   ]
   foreach ifile $files {
     if { ![file isfile $ifile] } {
       puts " Could not find remote file $ifile "
@@ -134,7 +134,6 @@ set proj_dir [get_property directory [current_project]]
 
 # Set project properties
 set obj [current_project]
-set_property -name "board_part" -value "digilentinc.com:arty-z7-20:part0:1.1" -objects $obj
 set_property -name "default_lib" -value "xil_defaultlib" -objects $obj
 set_property -name "enable_vhdl_2008" -value "1" -objects $obj
 set_property -name "ip_cache_permissions" -value "read write" -objects $obj
@@ -164,8 +163,8 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 # Set 'sources_1' fileset object
 set obj [get_filesets sources_1]
 set files [list \
- [file normalize "${origin_dir}/example_design.v"] \
-]
+ [file normalize "${origin_dir}/example_design.vhd"] \
+ ]
 add_files -norecurse -fileset $obj $files
 
 # Import local files from the original project
@@ -242,8 +241,8 @@ set obj [get_filesets utils_1]
 if { [get_files axi_apb_bridge_0.xci] == "" } {
   import_files -quiet -fileset sources_1 $origin_dir/axi_apb_bridge_0.xci
 }
-if { [get_files example_design.v] == "" } {
-  import_files -quiet -fileset sources_1 $origin_dir/example_design.v
+if { [get_files example_design.vhd] == "" } {
+    import_files -quiet -fileset sources_1 $origin_dir/example_design.vhd
 }
 
 
