@@ -210,8 +210,8 @@ begin
   axis_mst0_tlast  <= axis_slv_tlast;
 
   axis_mst1_tvalid <= axis_mst0_tready and axis_slv_tvalid;
-  axis_mst1_tdata  <= std_logic_vector(shift_left(unsigned(axis_slv_tdata),to_integer(unsigned(shift_right_s)))) & 
-                      std_logic_vector(shift_left(unsigned(axis_slv_tdata),to_integer(unsigned(shift_right_s))));
+  axis_mst1_tdata  <= std_logic_vector(shift_left(unsigned(axis_slv_tdata),to_integer(unsigned(shift_left_s)))) & 
+                      std_logic_vector(shift_left(unsigned(axis_slv_tdata),to_integer(unsigned(shift_left_s))));
   axis_mst1_tlast  <= axis_slv_tlast;
 
   axis_slv_tready  <= axis_mst0_tready and axis_mst1_tready;
